@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import LoginPage from './pages/LoginPage'
-import HomePage from './pages/HomePage'
+import HomePage from './pages/Homepage'
 import { storage } from './utils/storage'
 
 export default function App() {
