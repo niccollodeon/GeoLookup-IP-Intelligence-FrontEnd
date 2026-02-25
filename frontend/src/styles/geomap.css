@@ -1,0 +1,13 @@
+.leaflet-map {
+  height: 100%;
+  width: 100%;
+}
+
+.map-pin {
+  width: 14px;
+  height: 14px;
+  background: #00ffc8;
+  border: 2px solid #0a0a0f;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.7);
+}

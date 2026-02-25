@@ -1,0 +1,77 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #0a0a0f;
+  --surface:    #11111a;
+  --surface2:   #18182a;
+  --border:     #2a2a45;
+  --accent:     #00ffc8;
+  --accent2:    #7b61ff;
+  --text:       #e8e8f0;
+  --text-muted: #6b6b8a;
+  --text-dim:   #3a3a5a;
+  --success:    #00e67a;
+  --error:      #ff4757;
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Animated grid background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,200,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,200,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root { position: relative; z-index: 1; min-height: 100vh; }
+
+/* ── Shared animations ── */
+@keyframes shimmer   { to { background-position: 200%; } }
+@keyframes slideUp   { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
+@keyframes fadeIn    { from { opacity:0; } to { opacity:1; } }
+@keyframes spin      { to { transform: rotate(360deg); } }
+@keyframes ping      { 0% { transform: scale(1); opacity:1; } 100% { transform: scale(2); opacity:0; } }
+
+/* ── Shared components ── */
+.spinner {
+  width: 18px; height: 18px;
+  border: 2px solid rgba(0,255,200,0.2);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--surface2) 25%, var(--border) 50%, var(--surface2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+  height: 1rem;
+}
+
+.error-msg {
+  padding: 0.75rem 1rem;
+  background: rgba(255,71,87,0.1);
+  border: 1px solid rgba(255,71,87,0.3);
+  border-radius: 2px;
+  color: var(--error);
+  font-size: 0.82rem;
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 1.2rem;
+}
