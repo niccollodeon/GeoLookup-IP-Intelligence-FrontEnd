@@ -1,4 +1,4 @@
-const API_BASE = 'https://geolookup-ip-intelligence-production.up.railway.app/api'
+const API_BASE = 'https://geolookup-ip-intelligence-backend-production.up.railway.app/api'
 const GEO_API = 'https://ipinfo.io'
 
 export async function loginUser(email, password) {
