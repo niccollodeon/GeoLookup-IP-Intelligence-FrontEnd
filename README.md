@@ -11,7 +11,6 @@ frontend-react/
 ├── index.html
 ├── package.json
 ├── vite.config.js
-├── .env                      ← local env vars (never commit)
 └── src/
     ├── main.jsx              ← React entry point
     ├── App.jsx               ← Auth routing (login ↔ home)
@@ -43,14 +42,7 @@ frontend-react/
 
 ## 🚀 Local Development
 
-### 1. Set up environment variables
-
-Create a `.env` file in this folder:
-```
-VITE_API_BASE=http://localhost:8080/api
-```
-
-### 2. Install and run
+### Install and run
 
 ```bash
 npm install
