@@ -17,7 +17,7 @@ frontend-react/
     ├── App.jsx               ← Auth routing (login ↔ home)
     ├── pages/
     │   ├── LoginPage.jsx     ← Login form + API call
-    │   └── HomePage.jsx      ← Home screen logic
+    │   └── Homepage.jsx      ← Home screen logic
     ├── components/
     │   ├── Header.jsx        ← Top navigation bar
     │   ├── SearchBar.jsx     ← IP input + lookup button
@@ -47,7 +47,7 @@ frontend-react/
 
 Create a `.env` file in this folder:
 ```
-VITE_API_BASE=http://localhost:8000/api
+VITE_API_BASE=http://localhost:8080/api
 ```
 
 ### 2. Install and run
@@ -59,7 +59,7 @@ npm run dev
 
 Frontend runs at **http://localhost:3000**
 
-> Make sure the backend API is running at `http://localhost:8000` before trying to log in.
+> Make sure the backend API is running at `http://localhost:8080` before trying to log in.
 
 ---
 
@@ -72,7 +72,7 @@ Frontend runs at **http://localhost:3000**
 
 | Key | Value |
 |-----|-------|
-| `VITE_API_BASE` | `https://your-api.up.railway.app/api` |
+| `VITE_API_BASE` | `https://geolookup-ip-intelligence-backend-production.up.railway.app/api` |
 
 5. Click **Deploy** — done! 🎉
 
