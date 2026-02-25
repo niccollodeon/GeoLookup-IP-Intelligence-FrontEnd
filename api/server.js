@@ -94,7 +94,7 @@ app.post('/api/logout', authenticate, (_req, res) => {
 });
 
 // ── Start ─────────────────────────────────────────────────────────────────────
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`\nServer running on port ${PORT}`);
